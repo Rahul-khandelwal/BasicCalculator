@@ -32,11 +32,11 @@ class OperatorTest {
     @Test
     public void shouldThrowIllegalArgumentForDivideByZero() {
         Operator op = Operator.forSign('/');
-        Assertions.assertThrows(IllegalArgumentException.class, () -> op.execute(6, 0), "Expression causes divide by zero exception to occur.");
+        Assertions.assertThrows(IllegalArgumentException.class, () -> op.execute(6, 0));
     }
 
     @Test
     public void shouldThrowIllegalArgumentForUnsupportedSign() {
-        Assertions.assertThrows(UnsupportedOperationException.class, () -> Operator.forSign('&'), "Operation '&' is not yet supported.");
+        Assertions.assertThrows(UnsupportedOperationException.class, () -> Operator.forSign('&'));
     }
 }
